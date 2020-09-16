@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
-import FruitList from './FruitList';
-import VegetableList from './VegetableList';
-
-
-
+// import FruitList from './FruitList';
+// import VegetableList from './VegetableList';
+import FruitVeg from './Assignment/FruitVeg';
 
 function App() {
 
 
   return (
     <div className="App">
-      <FruitList />
-      <VegetableList />
+      <FruitVeg />
+
+      {/* <FruitList />
+      <VegetableList /> */}
 
     </div>
   );

@@ -37,7 +37,8 @@
   }
 }
 
-#fruits, #vegetables  {
+
+#fruitsVeg  {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -45,31 +46,12 @@
   width: 100%;
 }
 
-#fruits td, #fruits th, #vegetables td, #vegetables th{
+#fruitsVeg td, #fruitsVeg th{
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#fruits tr:nth-child(even){background-color: #f2f2f2;}
+#fruitsVeg tr:nth-child(even){background-color: #f2f2f2;}
 
-#fruits tr:hover {background-color: #ddd;}
+#fruitsVeg tr:hover {background-color: #ddd;}
 
-#fruits th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-}
-
-#vegetables tr:nth-child(even){background-color: #f2f2f2;}
-
-#vegetables tr:hover {background-color: #ddd;}
-
-#vegetables th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color:blueviolet;
-  color: white;
-}

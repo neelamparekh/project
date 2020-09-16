@@ -12,57 +12,62 @@ class FruitList extends Component {
                 { id: 3, name: 'Bananas', qty: 16, price: 3.00 },
                 { id: 4, name: 'Oranges', qty: 25, price: 4.00 }
             ],
-
         }
     }
 
-    tableData() {
+    tableData = () => {
 
-        return this.state.fruits.map((fruits, index) => {
+        return this.state.fruits.map((fruit, index) => {
 
-            const { id, name, qty, price } = fruits //destructuring
+            //const { id, name, qty, price } = fruits //destructuring
             return (
 
-                <tr key={id}>
-                    <td>{id}</td>
-                    <td>{name}</td>
-                    <td>{qty}</td>
-                    <td>${price}</td>
+                <tr key={fruit.id}>
+                    <td>{fruit.id}</td>
+                    <td>{fruit.name}</td>
+                    <td>{fruit.qty}</td>
+                    <td>${fruit.price}</td>
                 </tr>
             )
         })
     }
+    // selectedFruit = (e) => {
+    //     this.setState({
+    //         selectedFruit: e.target.value
+    //     })
+    //     // console.log(e.target.value);
+    // }
 
-    buy() {
-        this.setState((data) => ({
-            qty: data.qty + 1
-        }));
-    }
+    // buy = () => {
+    //     let tempFruits = this.state.fruits;
+    //     let res = tempFruits.map((fruit) => {
+    //         if (fruit.name === this.state.selectedFruit) {
+    //             fruit.qty = fruit.qty + 1;
+    //         }
+    //         return fruit;
+    //     })
+    //     console.log(res);
+    //     this.setState({
+    //         fruits: res
+    //     })
 
-    sell() {
-        this.setState((data) => ({
-            qty: data.qty - 1
-        }));
-    }
+    // }
+
+    // sell = () => {
+    //     this.setState((data) => ({
+    //         qty: data.qty - 1
+    //     }));
+    // }
 
 
     render() {
-
-        const { fruits } = this.state;
-
-        let frList = fruits.length > 0
-            && fruits.map((item, i) => {
-                return (
-                    <option key={i} value={item.id}>{item.name}</option>
-                )
-            }, this);
+        // const { fruits } = this.state;
 
         return (
             <div>
                 <h1>{this.state.heading}</h1>
 
-
-                <table id='fruits'>
+                {/* <table id='fruits'>
                     <tbody>
                         <tr>
                             <th>NO.</th>
@@ -72,10 +77,14 @@ class FruitList extends Component {
                         </tr>
                         {this.tableData()}
                     </tbody>
-                </table>
-                <select>Select Fruits {frList}</select>
+                </table> */}
+                {/* <select onChange={this.selectedFruit}>Select Fruits {fruits.map((item, i) => {
+                    return (
+                        <option key={i} value={item.name}>{item.name}</option>
+                    )
+                })} </select>
                 <button onClick={this.buy}>BUY</button>
-                <button onClick={this.sell}>SELL</button>
+                <button onClick={this.sell}>SELL</button> */}
 
 
             </div>
